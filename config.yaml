@@ -1,12 +1,15 @@
-# pywb config file
+# pywb config file - Built for running live under Heroku
 # ========================================
 #
 
 collections:
-    all: $all
-    pywb:
-        index_paths: ./sample_archive/cdx/
-        archive_paths: ./sample_archive/warcs/
+    live: $live
+
+# idk stuff from the website but tweaked settings. Banner makes it look ugly, wombat doesn't work, and you need rewriting
+proxy:
+  enable_banner: false
+  enable_wombat: false
+  enable_content_rewrite: true
 
 # Settings for each collection
 use_js_obj_proxy: true
@@ -15,14 +18,11 @@ use_js_obj_proxy: true
 enable_memento: true
 
 # Replay content in an iframe
-framed_replay: true
-
+framed_replay: false
 
 # uncomment and change to set default locale
-# default_locale: en
+default_locale: en
 
 # uncomment to set available locales
 locales:
   - en
-  - fr
-
