@@ -1,3 +1,4 @@
+pyamf
 six
 warcio>=1.7.1
 requests
